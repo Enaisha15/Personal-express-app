@@ -41,7 +41,8 @@ app.get('/', (req, res) => { //req is a request from the client side
 app.post('/messages', (req, res) => {
   //post is sending info to the server
   db.collection('messages').insertOne({msg: req.body.msg, thumbUp:0, thumbDown:0}, (err, result) => {
-    if (err) return console.log(err)
+  //collaborated with team Hayden to successfully complete team project 
+      if (err) return console.log(err)
     console.log('saved to database')
     res.redirect('/')
   })
@@ -75,3 +76,4 @@ app.delete('/messages', (req, res) => {
     res.send('Message deleted!')
   })
 })
+// collaborated with team Hayden to successfully complete team project 
